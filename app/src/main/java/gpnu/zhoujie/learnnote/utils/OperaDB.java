@@ -53,11 +53,11 @@ public class OperaDB {
             String time = cursor.getString(3);
             String note = cursor.getString(4);
 
-            String info = "\n[----------------++++-----------------]\n[----------------++++-----------------]\n" +
-                    "\tUUID：" + uuid + "\t账号：" +  account + "\t标题：" + title
-                    + "\n\t时间：" + time + "\t笔记：" + note + "\n[----------------++++-----------------]" +
-                    "\n[----------------++++-----------------]\n";
-            Log.i("查询数据", info);
+//            String info = "\n[----------------++++-----------------]\n[----------------++++-----------------]\n" +
+//                    "\tUUID：" + uuid + "\t账号：" +  account + "\t标题：" + title
+//                    + "\n\t时间：" + time + "\t笔记：" + note + "\n[----------------++++-----------------]" +
+//                    "\n[----------------++++-----------------]\n";
+//            Log.i("查询数据", info);
         }
     }
 
@@ -72,11 +72,11 @@ public class OperaDB {
             String phone = cursor.getString(4);
             String age = cursor.getString(5);
 
-            String info = "\n[----------------++++-----------------]\n[----------------++++-----------------]\n\t账号："
-                    + account + "\t密码：" + pwd + "\t姓名：" + name
-                    + "\n\t性别：" + sex + "\t电话：" + phone + "\t年龄："
-                    + age + "\n[----------------++++-----------------]\n\n[----------------++++-----------------]";
-            Log.i("查询数据", info);
+//            String info = "\n[----------------++++-----------------]\n[----------------++++-----------------]\n\t账号："
+//                    + account + "\t密码：" + pwd + "\t姓名：" + name
+//                    + "\n\t性别：" + sex + "\t电话：" + phone + "\t年龄："
+//                    + age + "\n[----------------++++-----------------]\n\n[----------------++++-----------------]";
+//            Log.i("查询数据", info);
         }
     }
 
@@ -94,9 +94,9 @@ public class OperaDB {
             String phone = cursor.getString(4);
             String age = cursor.getString(5);
 
-            String info = "账号：" + account + " 密码：" +  pwd + " 姓名：" + name
-                    + " 性别：" + sex + " 电话：" + phone + " 年龄：" + age;
-            Log.i("查询数据",info);
+//            String info = "账号：" + account + " 密码：" +  pwd + " 姓名：" + name
+//                    + " 性别：" + sex + " 电话：" + phone + " 年龄：" + age;
+//            Log.i("查询数据",info);
 
             PersonMsg personMsg = new PersonMsg(account,pwd,name,sex,phone,age);
             list.add(personMsg);

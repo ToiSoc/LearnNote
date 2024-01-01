@@ -167,7 +167,7 @@ public class AddNoteActivity extends AppCompatActivity {
         Matcher m = p.matcher(note);
 
         // 创建一个SpannableString
-        SpannableString spannable = new SpannableString(" "+note);
+        SpannableString spannable = new SpannableString("\n "+note);
 
         while(m.find())
         {
@@ -182,9 +182,10 @@ public class AddNoteActivity extends AppCompatActivity {
             Log.i("Path长度为：",String.valueOf(path.length()));
             Log.i("处理Path后",path);
 
+//            int newWidth = 300;
+//            int newHeight = newWidth * height /width;
 
-
-            Bitmap bitmap = new ImageInsert().getSmallBitmap(path,200,400);
+            Bitmap bitmap = new ImageInsert().getSmallBitmap(path,380,490);
 //            // 加载图片并创建一个Bitmap
 //            Bitmap bitmap = BitmapFactory.decodeFile(path);
 
@@ -392,7 +393,8 @@ public class AddNoteActivity extends AppCompatActivity {
         int height = ScreenUtils.getScreenHeight(AddNoteActivity.this);
 
 
-        Bitmap bitmap = new ImageInsert().getSmallBitmap(path,width,480);
+
+        Bitmap bitmap = new ImageInsert().getSmallBitmap(path,width,height);
         ImageSpan imageSpan = new ImageSpan(this, bitmap);
         ss.setSpan(imageSpan, 0, tagPath.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return ss;
