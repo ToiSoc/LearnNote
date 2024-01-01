@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/meilihei"
+    >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="124dp"
+        android:layout_height="107dp"
+        android:src="@drawable/icon2"/>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_one"-->
+<!--        android:layout_width="700px"-->
+<!--        android:layout_height="200px"-->
+<!--        android:text="Learn Note"-->
+<!--        android:textSize="90px"-->
+<!--        android:background="@drawable/text_view_border"-->
+<!--        android:gravity="center"-->
+<!--        />-->
+
+    <EditText
+        android:id="@+id/edit_account"
+        android:layout_width="700px"
+        android:layout_height="130px"
+        android:textSize="35px"
+        android:hint="请输入账号"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_view_editor"
+        android:foreground="?selectableItemBackground"
+        />
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="700px"
+        android:layout_height="130px"
+        android:textSize="35px"
+        android:hint="请输入密码"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/text_view_editor"
+        android:foreground="?selectableItemBackground"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="340px"
+            android:layout_height="130px"
+            android:textSize="35px"
+            android:text="安全登录"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_view_border"
+            android:foreground="?selectableItemBackground"
+            />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="340px"
+            android:layout_height="130px"
+            android:textSize="35px"
+            android:text="账号注册"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_view_border"
+            android:foreground="?selectableItemBackground"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

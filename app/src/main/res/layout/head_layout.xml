@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/head_menu_relative"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/dkkjpg"
+        >
+
+
+        <ImageView
+            android:id="@+id/head_menu_image"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/boy"
+            />
+
+        <TextView
+            android:id="@+id/head_menu_name"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="135dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="24dp"
+            android:layout_toRightOf="@id/head_menu_image"
+            android:text="小叮当"
+
+            />
+
+        <TextView
+            android:id="@+id/head_menu_time"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:layout_marginTop="175dp"
+            android:textColor="#E1DFDF"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/head_menu_image"
+            android:textSize="16dp"
+            android:text="8月12日 下午 12:30" />
+
+<!--        <Button-->
+<!--            android:id="@+id/head_menu_button"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginLeft="360dp"-->
+<!--            android:background="@drawable/head_menu_button_style"-->
+<!--            />-->
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

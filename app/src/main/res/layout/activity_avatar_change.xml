@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/oop"
+    tools:context=".activity_fold.AvatarChangeActivity"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_avatar_change_to_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back"
+        android:background="#00BCD4"
+        app:title="编辑个人信息"
+        app:titleTextColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/radio_change"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/toolbar_pwd"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/avatar_main_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/buoumao" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_13"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_13"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_13"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_14"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_14"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_14"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_15"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_15"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_15"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_12"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_12"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_12"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_05"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_05"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+                    <View
+                        android:id="@+id/view_05"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_06"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_06"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_06"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_07"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_07"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_07"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_08"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_08"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_08"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+                <!--                <FrameLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center_horizontal|center_vertical"-->
+                <!--                    >-->
+
+                <!--                    <ImageView-->
+                <!--                        android:id="@+id/avatar_08"-->
+                <!--                        android:layout_width="50dp"-->
+                <!--                        android:layout_height="50dp"-->
+                <!--                        android:src="@drawable/avatar_08"-->
+                <!--                        android:clickable="true"-->
+                <!--                        android:focusable="true"-->
+                <!--                        android:onClick="change_avatar_image"-->
+                <!--                        />-->
+
+                <!--                    <View-->
+                <!--                        android:id="@+id/view_08"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:layout_width="54dp"-->
+                <!--                        android:layout_height="54dp"-->
+                <!--                        android:background="@drawable/avatar_change_border_hightlight"-->
+                <!--                        android:visibility="invisible" />-->
+
+                <!--                </FrameLayout>-->
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_01"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_01"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_01"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_02"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_02"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_02"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_03"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_03"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_03"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                <ImageView
+                    android:id="@+id/avatar_04"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/avatar_04"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="change_avatar_image"
+                    />
+
+                <View
+                    android:id="@+id/view_04"
+                    android:layout_gravity="center"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/avatar_change_border_hightlight"
+                    android:visibility="invisible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_09"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_09"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_09"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_10"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_10"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_10"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/avatar_11"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_11"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_11"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/avatar_16"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/avatar_16"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="change_avatar_image"
+                        />
+
+                    <View
+                        android:id="@+id/view_16"
+                        android:layout_gravity="center"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:background="@drawable/avatar_change_border_hightlight"
+                        android:visibility="invisible" />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/btn_change_avatar"
+                android:layout_width="700px"
+                android:layout_height="wrap_content"
+                android:text="保存修改"
+                android:textSize="45px"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/change_button_style"
+                android:foreground="?selectableItemBackground"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

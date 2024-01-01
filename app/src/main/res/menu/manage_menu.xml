@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_mes"
+        android:title="个人信息"
+        android:icon="@drawable/mes"
+        />
+
+    <item
+        android:id="@+id/menu_update_pwd"
+        android:title="修改密码"
+        android:icon="@drawable/cha_key2"
+        />
+
+    <item
+        android:id="@+id/menu_to_login"
+        android:title="注销"
+        android:icon="@drawable/logout"
+        />
+
+    <item
+        android:id="@+id/menu_to_exit"
+        android:title="退出"
+        android:icon="@drawable/exit"
+        />
+
+</menu>

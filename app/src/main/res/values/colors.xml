@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="clr_normal">#ff6eff2d</color>
+    <color name="clr_pressed">#669966</color>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/oop"
+    tools:context=".activity_fold.ChangeMessageActivity"
+    android:orientation="vertical"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_change_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back"
+        android:background="#00BCD4"
+        app:title="编辑个人信息"
+        app:titleTextColor="@color/white"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/radio_change"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/toolbar_pwd"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/change_avatar"
+                android:layout_width="114dp"
+                android:layout_height="110dp"
+                android:src="@drawable/info_self2"
+                />
+
+            <EditText
+                android:id="@+id/change_msg_name"
+                android:layout_width="700px"
+                android:layout_height="130px"
+                android:textSize="35px"
+                android:hint="请输入姓名"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/x"
+                android:background="@drawable/text_view_change_editor"
+                android:foreground="?selectableItemBackground"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/change_msg_man"
+                    android:layout_width="240px"
+                    android:layout_height="130px"
+                    android:textSize="35px"
+                    android:text="男"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:background="@drawable/text_view_change_editor"
+                    />
+
+                <RadioButton
+                    android:id="@+id/change_msg_women"
+                    android:layout_width="240px"
+                    android:layout_height="130px"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="35px"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:text="女"
+                    android:background="@drawable/text_view_change_editor"
+                    />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/change_msg_phone"
+                android:layout_width="700px"
+                android:layout_height="130px"
+                android:textSize="35px"
+                android:hint="请输入联系方式"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/x"
+                android:background="@drawable/text_view_change_editor"
+                android:foreground="?selectableItemBackground"
+                />
+
+            <EditText
+                android:id="@+id/change_msg_age"
+                android:layout_width="700px"
+                android:layout_height="130px"
+                android:textSize="35px"
+                android:hint="请输入年龄"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/x"
+                android:background="@drawable/text_view_change_editor"
+                android:foreground="?selectableItemBackground"
+                />
+
+            <Button
+                android:id="@+id/btn_change_msg_endure"
+                android:layout_width="700px"
+                android:layout_height="wrap_content"
+                android:text="保存修改"
+                android:textSize="45px"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/change_button_style"
+                android:foreground="?selectableItemBackground"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:Android="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/add_note_del"
+        android:title="删除"
+        android:icon="@drawable/dustbin"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/add_note_save"
+        android:title="保存"
+        android:icon="@drawable/endure"
+        app:showAsAction="always"
+        />
+
+
+
+</menu>
