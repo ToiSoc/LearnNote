@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,7 +17,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -167,7 +170,7 @@ public class AddNoteActivity extends AppCompatActivity {
         Matcher m = p.matcher(note);
 
         // 创建一个SpannableString
-        SpannableString spannable = new SpannableString("\n "+note);
+        SpannableString spannable = new SpannableString(" "+note);
 
         while(m.find())
         {
@@ -178,14 +181,14 @@ public class AddNoteActivity extends AppCompatActivity {
             int width = ScreenUtils.getScreenWidth(AddNoteActivity.this);
             int height = ScreenUtils.getScreenHeight(AddNoteActivity.this);
 
-            String path = s.replaceAll("\\<img src=\"|\"\\/>","").trim();
+            String path = s.replaceAll("\\<img src=\"|\"\\/\\>","").trim();
+
+            Log.i("原始字符",s);
             Log.i("Path长度为：",String.valueOf(path.length()));
             Log.i("处理Path后",path);
 
-//            int newWidth = 300;
-//            int newHeight = newWidth * height /width;
 
-            Bitmap bitmap = new ImageInsert().getSmallBitmap(path,380,490);
+            Bitmap bitmap = new ImageInsert().getSmallBitmap(path,480,500);
 //            // 加载图片并创建一个Bitmap
 //            Bitmap bitmap = BitmapFactory.decodeFile(path);
 
@@ -201,12 +204,13 @@ public class AddNoteActivity extends AppCompatActivity {
 
             // 将Bitmap转换为Drawable
 //            BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(bitmap, targetWidth, targetHeight, true));
-//            insertImg(path);
+
             ImageSpan imageSpan = new ImageSpan(this, bitmap);
             spannable.setSpan(imageSpan,start,end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+
         }
         addNoteMsg.setText(spannable);
-        addNoteMsg.append("\n");
+        addNoteMsg.append(" ");
         return true;
     }
 
@@ -223,7 +227,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode,Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         //参考网址：
@@ -232,18 +236,31 @@ public class AddNoteActivity extends AppCompatActivity {
         ContentResolver resolver = getContentResolver();
         if(requestCode == IMAGE_CODE){
             try{
-                // 获得图片的uri
-                Uri originalUri = data.getData();
-                bm = MediaStore.Images.Media.getBitmap(resolver,originalUri);
-                String[] proj = {MediaStore.Images.Media.DATA};
-                // 好像是android多媒体数据库的封装接口，具体的看Android文档
-                Cursor cursor = managedQuery(originalUri,proj,null,null,null);
-                // 按我个人理解 这个是获得用户选择的图片的索引值
-                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-                // 将光标移至开头 ，这个很重要，不小心很容易引起越界
+//                // 获得图片的uri
+//                Uri originalUri = data.getData();
+//                bm = MediaStore.Images.Media.getBitmap(resolver,originalUri);
+//
+//
+//                String[] proj = {MediaStore.Images.Media.DATA};
+//                // 好像是android多媒体数据库的封装接口，具体的看Android文档
+//                Cursor cursor = managedQuery(originalUri, proj, null, null, null);
+//                // 按我个人理解 这个是获得用户选择的图片的索引值
+//                int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media._ID);
+//                Log.i("获取到的图片信息：",String.valueOf(column_index));
+//                // 将光标移至开头 ，这个很重要，不小心很容易引起越界
+//                cursor.moveToFirst();
+//                // 最后根据索引值获取图片路径
+//                String path = cursor.getString(column_index);
+
+                Uri uri = data.getData();
+
+                //指定解析出来的值，路径和大小，因为我是需要上传文件的，但是也不能过大，所以只要这两个值，需要其他的自行设定，都是在这个数组内设置，这是视频，图片直接更改Video为Image(MediaStore.Image.Media.DATA)
+                String[] projection = { MediaStore.Images.Media.DATA };
+                Cursor cursor = getContentResolver().query(uri, projection, null, null, null);
                 cursor.moveToFirst();
-                // 最后根据索引值获取图片路径
-                String path = cursor.getString(column_index);
+
+                String path = cursor.getString(0); // 图片文件路径
+
                 Log.i("上传图片","上传的图片:"+path);
                 insertImg(path);
                 //Toast.makeText(AddFlagActivity.this,path,Toast.LENGTH_SHORT).show();
@@ -364,7 +381,19 @@ public class AddNoteActivity extends AppCompatActivity {
     //region 插入图片
     private void insertImg(String path){
         String tagPath = "<img src=\""+path+"\"/>";//为图片路径加上<img>标签
-        Bitmap bitmap = BitmapFactory.decodeFile(path);
+        Log.i("添加标签",tagPath);
+        Bitmap bitmap = null;
+        if(Environment.isExternalStorageManager())
+        {
+            bitmap = BitmapFactory.decodeFile(path);
+        }
+        else
+        {
+            Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+            intent.setData(Uri.parse("package:" + this.getPackageName()));
+            startActivity(intent);
+        }
+
         if(bitmap != null){
             SpannableString ss = getBitmapMime(path,tagPath);
             insertPhotoToEditText(ss);
@@ -394,7 +423,7 @@ public class AddNoteActivity extends AppCompatActivity {
 
 
 
-        Bitmap bitmap = new ImageInsert().getSmallBitmap(path,width,height);
+        Bitmap bitmap = new ImageInsert().getSmallBitmap(path,480,500);
         ImageSpan imageSpan = new ImageSpan(this, bitmap);
         ss.setSpan(imageSpan, 0, tagPath.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return ss;

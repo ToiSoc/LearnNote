@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
 
 
     <application
@@ -15,7 +18,7 @@
         android:roundIcon="@drawable/home_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnNote"
-        tools:targetApi="32">
+        >
 
         <activity
             android:name=".activity_fold.AvatarChangeActivity"
