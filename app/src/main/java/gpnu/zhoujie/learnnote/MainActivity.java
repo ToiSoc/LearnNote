@@ -37,20 +37,11 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = dbUtils.getWritableDatabase();
         DBUtils.db = db;
 
-
-//        Intent intent = new Intent(MainActivity.this, ManageActivity.class);
-//        intent.putExtra("account","root");
-//        intent.putExtra("image_id","01");
-//        startActivity(intent);
-
-
-
         Button btn_login = findViewById(R.id.btn_login);
         Button btn_register = findViewById(R.id.btn_register);
 
         EditText account = findViewById(R.id.edit_account);
         EditText pwd = findViewById(R.id.edit_pwd);
-
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
